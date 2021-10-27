@@ -1,0 +1,94 @@
+/* H1 é o seleton, e o que está dentro e a propriedade: valor*/
+* {
+  margin: 0;
+}
+html,
+body {
+  --black: hsl(240, 6%, 13%);
+  --grey: hsl(240, 9%, 89%);
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  background: linear-gradient(to right, #fdb99b, #cf8bf3, #a770ef);
+  display: grid;
+  place-items: center;
+}
+main {
+  background: url(imagens/images/background.svg) no-repeat center/cover;
+  width: 100vw;
+  max-width: 375px;
+  margin-top: 125px;
+  margin-bottom: 125px;
+  box-shadow: 0 0 5em rgb(73, 4, 73);
+  min-height: 375px;
+  max-height: 500px;
+  height: 100vh;
+}
+main:hover{
+  background: url(imagens/images/background.svg) no-repeat center/cover;
+  border-radius: 100px;
+}
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  color: var(--grey);
+}
+.avatar {
+  width: 10rem;
+  margin: 5.5rem auto 0;
+  /* Ele é o absolute para o outro avatar */
+  position: relative;
+}
+.avatar span {
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+}
+/* quando você coloca o avatar imagem, vc tem duas imagens, para pegar no primeiro nivel '>' */
+.avatar > img {
+  width: 8 rem;
+  height: 8.5rem;
+  /* object fit ele vai cobrir toda a imagem, cobrindo todo o espaço */
+  object-fit: cover;
+
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+
+
+}
+h1 {
+  font-size: 1.5rem;
+  
+  margin-top: 1rem;
+}
+a {
+  margin-top: 0.25rem;
+  text-decoration: none;
+  color: var(--grey);
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+p{
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+ul {
+  margin-top: 2rem;
+
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  gap: 0.5rem;
+
+  justify-content: center;
+}
+ul li {
+  width: 40px;
+}
